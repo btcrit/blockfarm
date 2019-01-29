@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
+}
+#button{
+    width: 100vw;
+    height: 50vh;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#button:active{
+    background-color: lime;
+}
