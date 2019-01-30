@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>MANNER</title>
+
+        <!--Make it the correct scale on mobile.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Tell Iphone's to get rid of all that stuff hogging the screen.-->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!--Bring in socket.io so we can talk to the server-->
+        <script src="/socket.io/socket.io.js"></script>
+
+        <link rel="stylesheet" href="explorer.css">
+    </head>
+    <body>
+        <div class="twocol">
+            <div class="title">
+                <h1>BlockFarm</h1>
+            </div>
+            <div class="rows" id="rows">
+                <div class="row" id="genesis">
+                    <div class="block">
+                        <h2>Block #0</h2>
+                        <h1>&lt;START&gt;</h1>
+                        <h2>This is called the "Genesis Block"</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="explorer.js" charset="utf-8"></script>
+    </body>
+</html>

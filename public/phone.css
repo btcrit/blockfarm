@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  background-color: #00db8b;
+  padding: 0 1rem;
+}
+.page {
+  width: min-content;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.page > .in {
+  padding: 1rem 2rem;
+  background-color: #00754b;
+  box-shadow: -0.5rem 0.5rem 0 0 rgba(0, 0, 0, 0.2);
+  border: 4px solid #dbfff2;
+  color: white;
+}
+.title {
+  margin-top: 1rem;
+  background-color: unset;
+  box-shadow: none;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+}
+.title h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow: -4px 4px 0px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+.title p {
+  font-size: 1rem;
+  font-weight: 900;
+}
+label {
+  display: block;
+  margin: 4px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+input {
+  padding: 8px;
+  margin: 4px;
+  font-size: 1.2rem;
+}
+button {
+  background: none;
+  border: none;
+  color: #00754b;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: -0.5rem 0.5rem 0 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  border: 4px solid #00754b;
+  text-shadow: -2px 2px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: box-shadow 0.01s ease-in-out;
+  /*iOS will be the death of me*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  -webkit-appearnace: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+button:active {
+  background-color: #0fffa8;
+  box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
+}

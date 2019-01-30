@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>MANNER</title>
+
+        <!--Make it the correct scale on mobile.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <!--Tell Iphone's to get rid of all that stuff hogging the screen.-->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!--Bring in socket.io so we can talk to the server-->
+        <script src="/socket.io/socket.io.js"></script>
+
+        <link rel="stylesheet" href="phone.css">
+    </head>
+    <body>
+        <div class="page">
+            <div class="title">
+                <h1>BlockFarm</h1>
+                <p>Manual Blockchain Mining Demo</p>
+            </div>
+            <!-- What block to build on -->
+            <div class="in">
+                <label for="last_block">Block to Build On:</label>
+                <input size="10" type="text" name="last" value="" id="last_block" placeholder="42"></input>
+            </div>
+            <!-- What text to include -->
+            <div class="in">
+                <label for="content">Text to Include:</label>
+                <input size="10" type="text" name="text" value="" id="content" placeholder="Hello!">
+            </div>
+            <!-- "Mine" button -->
+            <button type="button" ontouchstart="" name="button" id="button">Mine!</button>
+            <script src="phone.js" charset="utf-8"></script>
+        </div>
+    </body>
+</html>
