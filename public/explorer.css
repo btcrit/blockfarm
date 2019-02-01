@@ -17,17 +17,24 @@ body {
   text-shadow: -4px -4px 0px rgba(0, 0, 0, 0.2);
   height: 100%;
 }
-.rows {
+#rows_viewbox {
   width: 100%;
   flex-grow: 1;
-  padding: 1rem 1rem;
   overflow: auto;
 }
+.rows {
+  width: max-content;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+}
 .row {
-  padding: 0.5rem 0;
+  padding: 0;
+  margin: 2rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  min-width: min-content;
 }
 .block {
   background-color: white;
@@ -36,7 +43,7 @@ body {
   font-family: sans-serif;
   text-align: center;
   padding: 0.5rem;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   color: #00754b;
 }
 .block h1 {
@@ -50,4 +57,19 @@ body {
 .block.unconfirmed {
   color: #a8003d;
   border-color: #a8003d;
+}
+.block.attempt {
+  background-color: cyan;
+}
+.block.recent {
+  color: blue;
+  border-color: blue;
+}
+#svg_sizer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }

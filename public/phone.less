@@ -10,14 +10,15 @@ body{
     width: min-content;
     margin: 0 auto;
     height: 100vh;
-    display: flex;
+    //display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .page > .in{
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
     background-color: darken(@color, 10%);
     box-shadow: -0.5rem 0.5rem 0 0 fade(black, 20%);
     border: 4px solid lighten(@color, 60%);
@@ -25,7 +26,7 @@ body{
 }
 
 .title{
-    margin-top: 1rem;
+    margin: 1rem 0;
     background-color: unset;
     box-shadow: none;
     color:white;
@@ -43,6 +44,14 @@ body{
     }
 }
 
+h2{
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 label{
     display: block;
     margin: 4px;
@@ -54,6 +63,7 @@ input{
     padding: 8px;
     margin: 4px;
     font-size: 1.2rem;
+    max-width: calc(100vw - 7rem);
 }
 
 button{
@@ -61,6 +71,7 @@ button{
     border: none;
     color: darken(@color, 10%);
     padding: 1rem;
+    margin: 1rem 0;
     width: 100%;
     box-shadow: -0.5rem 0.5rem 0 0 fade(black, 20%);
     background-color: white;

@@ -18,12 +18,19 @@
             <div class="title">
                 <h1>BlockFarm</h1>
             </div>
-            <div class="rows" id="rows">
-                <div class="row" id="genesis">
-                    <div class="block">
-                        <h2>Block #0</h2>
-                        <h1>&lt;START&gt;</h1>
-                        <h2>This is called the "Genesis Block"</h2>
+            <!-- This is a wrapper for scrollbars -->
+            <div id="rows_viewbox">
+                <div class="rows" id="rows">
+                    <div id="svg_sizer">
+                        <svg id="svg">
+                        </svg>
+                    </div>
+                    <div class="row" id="genesis">
+                        <div class="block" id="genesis_block">
+                            <h2>Block #0</h2>
+                            <h1>&lt;START&gt;</h1>
+                            <h2>This is called the "Genesis Block"</h2>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -19,15 +19,22 @@
                 <h1>BlockFarm</h1>
                 <p>Manual Blockchain Mining Demo</p>
             </div>
+            <h2>Help Mine a Block</h2>
+            <div class="in">
+                <label for="help_with">Block to Help with:</label>
+                <input size="5" type="number" name="help" value="" id="help_with" placeholder="#"></input>
+            </div>
+            <button type="button" ontouchstart="" name="button" id="help">Mine!</button>
+            <h2>Create a New Block</h2>
             <!-- What block to build on -->
             <div class="in">
                 <label for="last_block">Block to Build On:</label>
-                <input size="10" type="text" name="last" value="" id="last_block" placeholder="42"></input>
+                <input size="5" type="number" name="last" value="" id="last_block" placeholder="#"></input>
             </div>
             <!-- What text to include -->
             <div class="in">
                 <label for="content">Text to Include:</label>
-                <input size="10" type="text" name="text" value="" id="content" placeholder="Hello!">
+                <input type="text" name="text" value="" id="content" maxlength="10">
             </div>
             <!-- "Mine" button -->
             <button type="button" ontouchstart="" name="button" id="button">Mine!</button>
