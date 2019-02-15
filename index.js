@@ -9,7 +9,7 @@ var ex = io.of('/explorer');
 let Filter = require('bad-words');
 let filter = new Filter();
 
-let difficulty = 20;
+let difficulty = 50;
 
 
 // ---------- ---------- Data Structure ---------- ----------
