@@ -172,7 +172,7 @@ function insert_block(block, id){
     row.appendChild(ablock);
 
     // Now, scroll to the block so we can see it.
-    ablock.scrollIntoView();
+    // ablock.scrollIntoView();
 
     // Styling of most-recent added block:
     ablock.classList.add('recent');
@@ -188,6 +188,25 @@ function insert_block(block, id){
     re_draw_lines();
 }
 
+function highlight(id){
+
+    console.log("New tallest block: "+id);
+
+    // step1 - remove highlighting from all
+
+    for(let b in blocks){
+        blocks[b].element.classList.remove("tall");
+    }
+
+    // step2 - Add highlighting to id and below
+
+    let target = blocks[id];
+    do {
+        target.element.classList.add("tall");
+    } while (target = blocks[target.prev]);
+
+}
+
 function nuke(id){
     console.log("Nuking "+id);
     blocks[id]["content"] = "[removed]";
@@ -198,7 +217,7 @@ function nuke(id){
 
 var socket = io('/explorer');
 
-// handle connect, all_blocks([]), new_block(id,block), block_mined(id)
+// Relay incoming messages to the appropriate handlers
 
 socket.on('connect',function(){
     console.log('Connected! ID is'+socket.io.engine.id);
@@ -222,4 +241,9 @@ socket.on('block_attempted', function(id){
 
 socket.on('nuke', function(id){
     nuke(id);
+});
+
+socket.on('new_tallest', function(id){
+    // TODO - highlight longest chain
+    highlight(id);
 });
