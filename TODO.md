@@ -1,0 +1,8 @@
+- Character Whitelist
+    - Only [A-Z][a-z][1-9] and some punctuation
+    - DONE
+- Error message when a proposal is rejected
+- "Already Mined!" when block is mined
+- "You got one!" When you mine a block
+- Console to delete that which the filter doesn't
+- Reward for clicking

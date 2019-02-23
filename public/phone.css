@@ -11,7 +11,9 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-.page > .in {
+.page > .in,
+#feedback,
+#points {
   padding: 1rem 1rem;
   margin: 1rem 0;
   background-color: #00754b;
@@ -88,4 +90,9 @@ button {
 button:active {
   background-color: #0fffa8;
   box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
+}
+#feedback,
+#points {
+  text-align: center;
+  font-family: sans-serif;
 }
