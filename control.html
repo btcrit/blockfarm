@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>MANNER</title>
+
+        <!--Make it the correct scale on mobile.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <!--Tell Iphone's to get rid of all that stuff hogging the screen.-->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!--Bring in socket.io so we can talk to the server-->
+        <script src="/socket.io/socket.io.js"></script>
+
+        <link rel="stylesheet" href="phone.css">
+    </head>
+    <body>
+        <div class="page">
+            <div class="title">
+                <h1>Control</h1>
+            </div>
+            <h2>Delete a Block</h2>
+            <div class="in">
+                <label for="help_with">Block to Nuke:</label>
+                <input size="5" type="number" name="help" value="" id="help_with" placeholder="#"></input>
+            </div>
+            <button type="button" ontouchstart="" name="button" id="help">Nuke!</button>
+            <script src="control.js" charset="utf-8"></script>
+        </div>
+    </body>
+</html>

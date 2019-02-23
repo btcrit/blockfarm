@@ -2,7 +2,11 @@
     - Only [A-Z][a-z][1-9] and some punctuation
     - DONE
 - Error message when a proposal is rejected
+    - DONE
 - "Already Mined!" when block is mined
+    - DONE
 - "You got one!" When you mine a block
+    - DONE
 - Console to delete that which the filter doesn't
+    - NEEDS TO BE DONE
 - Reward for clicking

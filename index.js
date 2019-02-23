@@ -5,6 +5,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 // Socket connections to Viewers
 var ex = io.of('/explorer');
+var ct = io.of('/control');
 // Filter bad words
 let Filter = require('bad-words');
 let filter = new Filter();
@@ -190,6 +191,11 @@ app.get('/explorer', function(req, res) {
     res.sendFile(__dirname + '/explorer.html')
 })
 
+// Send page for control
+app.get('/control', function(req, res) {
+    res.sendFile(__dirname + '/control.html')
+})
+
 // ---------- ---------- Setup Socket Behavior ---------- ----------
 
 // Phones
@@ -221,6 +227,23 @@ ex.on('connection', function(socket){
     //When the client disconnects
     socket.on('disconnect', function(){
         console.log('EXPRDSCT:'+socket.id);
+    });
+});
+
+// Control System
+ct.on('connection', function(socket){
+    console.log('CTRLCNCT:'+socket.id);
+    //When the client disconnects
+    socket.on('disconnect', function(){
+        console.log('CTRLDSCT:'+socket.id);
+    });
+    socket.on('nuke', function(id){
+        if(!blocks[id]){
+            console.log("Nuke Request for non-existing block "+id);
+            return;}
+        console.log("NUKE: Sending command to nuke "+id);
+        ex.emit('nuke', id);
+        blocks[id].content = "[removed]";
     });
 });
 

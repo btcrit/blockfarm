@@ -188,6 +188,12 @@ function insert_block(block, id){
     re_draw_lines();
 }
 
+function nuke(id){
+    console.log("Nuking "+id);
+    blocks[id]["content"] = "[removed]";
+    blocks[id].element.firstChild.nextSibling.innerHTML = "[removed]";
+}
+
 // ~~~~~ Establish Network and Define Reactions to Events ~~~~~
 
 var socket = io('/explorer');
@@ -212,4 +218,8 @@ socket.on('block_mined', function(id){
 
 socket.on('block_attempted', function(id){
     block_attempted(id);
+});
+
+socket.on('nuke', function(id){
+    nuke(id);
 });
